@@ -8,7 +8,7 @@ import ArrowIcon from '../icons/arrow-right-icon';
 const EventItem = ({event}) => {
     const {title, image, id, date, location} = event;
     const readableDate = new Date(date).toLocaleDateString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})
-    const formatedLocation = location.replace(', ', '\n');
+    const formatedLocation = location&&location.replace(', ', '\n');
     console.log(formatedLocation);
     const exploreLink =`/events/${id}`
     return (
